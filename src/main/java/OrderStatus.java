@@ -1,5 +1,15 @@
 public enum OrderStatus {
-    PROCESSING,
-    IN_DELIVERY,
-    COMPLETED;
+    PROCESSING("In Bearbeitung"),
+    IN_DELIVERY("Wird geliefert"),
+    COMPLETED("Abgeschlossen");
+
+    private final String description;
+
+    OrderStatus(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

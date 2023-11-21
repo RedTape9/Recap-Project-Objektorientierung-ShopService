@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class OrderMapRepo implements OrderRepo{
+public class OrderMapRepo implements OrderRepo {
     private Map<String, Order> orders = new HashMap<>();
 
     @Override
@@ -25,5 +25,11 @@ public class OrderMapRepo implements OrderRepo{
     @Override
     public void removeOrder(String id) {
         orders.remove(id);
+    }
+
+    @Override
+    public void updateOrder(Order updatedOrder) {
+        orders.put(updatedOrder.id(), updatedOrder);
+
     }
 }
