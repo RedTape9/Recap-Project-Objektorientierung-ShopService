@@ -18,6 +18,10 @@ public class Main {
 
         shopService.getOrdersByStatus(OrderStatus.PROCESSING).forEach(System.out::println);
 
+        shopService.updateOrder("1", OrderStatus.IN_DELIVERY);
+
+        shopService.getOrdersByStatus(OrderStatus.IN_DELIVERY).forEach(System.out::println);
+
 
     }
 }
